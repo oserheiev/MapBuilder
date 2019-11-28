@@ -84,7 +84,17 @@ https://www.tooplate.com/view/2115-marvel
           <div class="col-12 col-sm-6 col-lg-4">
             <div class="canvas-container border">
               <ul class="canvas-toolbar__list">
-                <li class="canvas-toolbar__list-item" draggable="true">
+                <li class="canvas-toolbar__list-item" draggable="true" data-item-properties='{
+                  "left": 150,
+                  "top": 200,
+                  "originX": "left",
+                  "originY": "top",
+                  "width": 150,
+                  "height": 120,
+                  "angle": -10,
+                  "fill": "rgba(255,0,0,0.5)",
+                  "transparentCorners": false
+                }'>
                   <img src="images/tool-icons/Door.svg" height="130" width="130" />
                 </li>
                 <li class="canvas-toolbar__list-item">
@@ -195,6 +205,7 @@ https://www.tooplate.com/view/2115-marvel
   <script src="js/smoothscroll.js"></script>
   <script src="js/custom.js"></script>
   <script src="js/fabric.min.js"></script>
+  <script src="js/canvas.js"></script>
   <script src="js/toolbar.js"></script>
 
 </body>
