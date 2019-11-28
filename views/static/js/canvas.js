@@ -1,3 +1,3 @@
 $(document).ready(function () {
-    window.Canvas = this.__canvas = new fabric.Canvas('map');
+    window.Canvas = new fabric.Canvas('map');
 });
