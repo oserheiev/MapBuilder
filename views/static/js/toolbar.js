@@ -10,13 +10,19 @@ $(document).ready(function () {
   $('canvas').on('drop', function (e) {
     const itemProperties = e.originalEvent.dataTransfer.getData('application/json');
     const jsonItemProperties = JSON.parse(itemProperties);
-    
-    var pointer = window.Canvas.getPointer(e);
-    jsonItemProperties.left = pointer.x;
-    jsonItemProperties.top = pointer.y;
 
+    calculateAndSetFigurePosition(jsonItemProperties, e);
     const canvasItem = new fabric.Rect(jsonItemProperties);
 
     window.Canvas.add(canvasItem).setActiveObject(canvasItem);
   });
+
+  function calculateAndSetFigurePosition(jsonItemProperties, e) {
+    const pointer = window.Canvas.getPointer(e);
+    const leftFigurePosition = pointer.x - jsonItemProperties.width / 2;
+    const topFigurePosition = pointer.y - jsonItemProperties.height / 2;
+
+    jsonItemProperties.left = leftFigurePosition;
+    jsonItemProperties.top = topFigurePosition;
+  }
 });
