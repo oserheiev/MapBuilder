@@ -1,0 +1,165 @@
+<!-- MENU -->
+<header>
+  <nav class="navbar navbar-expand-sm navbar-light">
+    <div class="container container-lg">
+      <a class="navbar-brand" href="index.html"><i class='uil uil-user'></i> <%= user ? user.name : 'Log In' %> </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#project" class="nav-link"><span data-hover="Projects">Projects</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#resume" class="nav-link"><span data-hover="Resume">Resume</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
+          </li>
+        </ul>
+
+        <div>
+          <div class="color-mode d-lg-flex justify-content-center align-items-center">
+            <i class="color-mode-icon"></i>
+            Color mode
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<!-- PROJECTS -->
+<main class="text-center">
+  <section class="project py-3" id="project">
+    <div class="container container-lg">
+      <div class="row">
+
+        <div class="col-12 mx-auto pb-3">
+          <div class="col-6 mx-auto">
+            <h2>Things I have designed for digital media agencies</h2>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="canvas-container border">
+            <ul class="canvas-toolbar__list">
+              <li class="canvas-toolbar__list-item" draggable="true" data-item-properties='{
+                  "originX": "left",
+                  "originY": "top",
+                  "width": 150,
+                  "height": 120,
+                   "centeredRotation": false,
+                  "fill": "rgba(255,0,0,0.5)",
+                  "transparentCorners": false
+                }'>
+                <img src="images/tool-icons/Door.svg" height="130" width="130" />
+              </li>
+              <li class="canvas-toolbar__list-item">
+                <svg width="130" height="130">
+                  <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+                </svg>
+              </li>
+              <li class="canvas-toolbar__list-item">
+                <svg height="130" width="130">
+                  <circle cx="70" cy="70" r="40" stroke="black" stroke-width="3" fill="red" />
+                </svg>
+              </li>
+              <li class="canvas-toolbar__list-item">
+                <svg height="130" width="130">
+                  <circle cx="70" cy="70" r="40" stroke="black" stroke-width="3" fill="red" />
+                </svg>
+              </li>
+              <li class="canvas-toolbar__list-item">
+                <svg width="130" height="130">
+                  <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+                </svg>
+              </li>
+              <li class="canvas-toolbar__list-item">
+                <svg height="130" width="130">
+                  <circle cx="70" cy="70" r="40" stroke="black" stroke-width="3" fill="red" />
+                </svg>
+              </li>
+              <li class="canvas-toolbar__list-item">
+                <svg height="130" width="130">
+                  <circle cx="70" cy="70" r="40" stroke="black" stroke-width="3" fill="red" />
+                </svg>
+              </li>
+              <li class="canvas-toolbar__list-item">
+                <svg height="130" width="130">
+                  <circle cx="70" cy="70" r="40" stroke="black" stroke-width="3" fill="red" />
+                </svg>
+              </li>
+              <li class="canvas-toolbar__list-item">
+                <svg height="130" width="130">
+                  <circle cx="70" cy="70" r="40" stroke="black" stroke-width="3" fill="red" />
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-8">
+          <div class="canvas-wrapper border">
+            <canvas id="map" class="canvas" width="925" height="700"></canvas>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container container-lg">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-end">
+          <button type="button" class="save-draw btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--  LOG-IN MODAL -->
+  <div class="login-wrapper d-none">
+    <div class="login-page">
+      <div class="form">
+        <form class="register-form">
+          <input type="text" placeholder="name" />
+          <input type="password" placeholder="password" />
+          <input type="text" placeholder="email address" />
+          <button>create</button>
+          <p class="message">Already registered? <a href="#">Sign In</a></p>
+        </form>
+        <form class="login-form">
+          <input type="text" placeholder="username" />
+          <input type="password" placeholder="password" />
+          <button>login</button>
+          <p class="message">Not registered? <a href="#">Create an account</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer py-5">
+  <div class="container container-lg">
+    <div class="row">
+
+      <div class="col-lg-12 col-12">
+        <p class="copyright-text text-center">Copyright &copy; 2019 Company Name . All rights reserved</p>
+        <p class="copyright-text text-center">Designed by <a rel="nofollow"
+            href="https://www.facebook.com/tooplate">Tooplate</a></p>
+      </div>
+
+    </div>
+  </div>
+</footer>
