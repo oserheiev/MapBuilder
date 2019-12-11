@@ -73,8 +73,8 @@ class UserController {
 
   postLogin(req, res, next) {
     passport.authenticate('local', {
-      successRedirect: '/dashboard',
-      failureRedirect: '/login',
+      successRedirect: '/',
+      failureRedirect: '/',
       failureFlash: true
     })(req, res, next);
   }
@@ -82,7 +82,7 @@ class UserController {
   getLogout(req, res, next) {
     req.logout();
     req.flash('success_msg', 'You are logged out');
-    res.redirect('/login');
+    res.redirect('/');
   }
 }
 
