@@ -492,6 +492,10 @@ b, strong {
   flex-basis: 33.333%;
 }
 
+.canvas-wrapper__centered {
+  margin: auto;
+}
+
 .save-draw {
   min-width: 120px;
 }
