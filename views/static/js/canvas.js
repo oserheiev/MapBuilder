@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    const ENTER_BUTTON = 46;
+    
+    const isEditMode = !!$('.canvas-toolbar__list').length;
     window.Canvas = new fabric.Canvas('map');
 
     $.ajax({
@@ -8,7 +11,7 @@ $(document).ready(function () {
     }).fail(function () {
         alert('Something went wrong!');
     });
-    
+
     $('.save-draw').on('click', function () {
         const mapJson = window.Canvas.toJSON();
 
@@ -19,7 +22,23 @@ $(document).ready(function () {
         }).done(function () {
             alert('The map is saved successfully!');
         }).fail(function () {
-            alert('Something went wrong!');
+            alert('Cannot save map!');
         });
     });
+
+    $(document).on('keydown', function (e) {
+        const keyCode = e.keyCode;
+
+        if (isEditMode && keyCode === ENTER_BUTTON) {
+            onElementDelete();
+        }
+    });
+
+    function onElementDelete() {
+        const activeObjects = window.Canvas.getActiveObjects();
+
+        activeObjects.forEach(canvasObject => {
+            window.Canvas.remove(canvasObject);       
+        });
+    }
 });
