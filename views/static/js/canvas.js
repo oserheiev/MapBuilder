@@ -1,6 +1,6 @@
 $(document).ready(function () {
     const ENTER_BUTTON = 46;
-    
+
     const isEditMode = !!$('.canvas-toolbar__list').length;
     window.Canvas = new fabric.Canvas('map');
 
@@ -8,6 +8,16 @@ $(document).ready(function () {
         url: '/api/map',
     }).done(function (body) {
         window.Canvas.loadFromJSON(body);
+        if(!isEditMode) {
+            Canvas.getObjects().forEach(element => {
+                element.lockMovementX = true;
+                element.lockMovementY = true;
+                element.lockScalingX = true;
+                element.lockScalingY = true;
+                element.lockRotation = true;
+                element.selectable = false;
+            });
+        }
     }).fail(function () {
         alert('Something went wrong!');
     });
@@ -38,7 +48,7 @@ $(document).ready(function () {
         const activeObjects = window.Canvas.getActiveObjects();
 
         activeObjects.forEach(canvasObject => {
-            window.Canvas.remove(canvasObject);       
+            window.Canvas.remove(canvasObject);
         });
     }
 });
