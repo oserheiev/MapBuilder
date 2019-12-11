@@ -1,6 +1,14 @@
 $(document).ready(function () {
     window.Canvas = new fabric.Canvas('map');
 
+    $.ajax({
+        url: '/api/map',
+    }).done(function (body) {
+        window.Canvas.loadFromJSON(body);
+    }).fail(function () {
+        alert('Something went wrong!');
+    });
+    
     $('.save-draw').on('click', function () {
         const mapJson = window.Canvas.toJSON();
 
