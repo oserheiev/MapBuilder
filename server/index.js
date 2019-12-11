@@ -14,6 +14,7 @@ const app = express();
 require('./config/passport')(passport);
 
 const PORT = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 3001;
+const serverIp = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
 // Connect to MongoDB
 mongoose
@@ -61,5 +62,5 @@ const staticFolderPath = path.join(__dirname, '../views/static');
 app.use(routes);
 app.use(express.static(staticFolderPath));
 
-app.listen(PORT, console.log(`Server started on port ${PORT}`));
+app.listen(PORT, serverIp, console.log(`Server started on ${serverIp}, port ${PORT}`));
 
