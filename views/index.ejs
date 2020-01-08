@@ -54,68 +54,84 @@
         </div>
 
         <% if(user) {%>
-          <div class="col-12 col-sm-6 col-lg-4">
+          <div class="col-12 col-sm-6 col-lg-3">
           <div class="canvas-container border">
             <ul class="canvas-toolbar__list">
               <li class="canvas-toolbar__list-item" draggable="true" data-item-properties='{
-                  "originX": "left",
-                  "originY": "top",
-                  "width": 150,
-                  "height": 120,
-                   "centeredRotation": false,
-                  "fill": "rgba(255,0,0,0.5)",
-                  "transparentCorners": false
+                "type": "image",
+                "width": 130,
+                "height": 130,
+                "src": "images/tool-icons/Door.png"
                 }'>
-                <img src="images/tool-icons/Door.svg" height="130" width="130" />
+                <img src="images/tool-icons/Door.png" height="130" width="130" />
               </li>
-              <li class="canvas-toolbar__list-item">
-                <svg width="130" height="130">
-                  <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
-                </svg>
+              <li class="canvas-toolbar__list-item"draggable="true" data-item-properties='{
+                "type": "image",
+                "width": 130,
+                "height": 130,
+                "src": "images/tool-icons/Event.png"
+                }'>
+                <img src="images/tool-icons/Event.png" height="130" width="130" />
               </li>
-              <li class="canvas-toolbar__list-item">
-                <svg height="130" width="130">
-                  <circle cx="70" cy="70" r="40" stroke="black" stroke-width="3" fill="red" />
-                </svg>
+              <li class="canvas-toolbar__list-item"draggable="true" data-item-properties='{
+                "type": "image",
+                "width": 130,
+                "height": 130,
+                "src": "images/tool-icons/Floor.png"
+                }'>
+                <img src="images/tool-icons/Floor.png" height="130" width="130" />
               </li>
-              <li class="canvas-toolbar__list-item">
-                <svg height="130" width="130">
-                  <circle cx="70" cy="70" r="40" stroke="black" stroke-width="3" fill="red" />
-                </svg>
+              <li class="canvas-toolbar__list-item"draggable="true" data-item-properties='{
+                "type": "image",
+                "width": 130,
+                "height": 130,
+                "src": "images/tool-icons/Object.png"
+                }'>
+                <img src="images/tool-icons/Object.png" height="130" width="130" />
               </li>
-              <li class="canvas-toolbar__list-item">
-                <svg width="130" height="130">
-                  <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
-                </svg>
+              <li class="canvas-toolbar__list-item"draggable="true" data-item-properties='{
+                "type": "image",
+                "width": 130,
+                "height": 130,
+                "src": "images/tool-icons/RegularEvent.png"
+                }'>
+                <img src="images/tool-icons/RegularEvent.png" height="130" width="130" />
               </li>
-              <li class="canvas-toolbar__list-item">
-                <svg height="130" width="130">
-                  <circle cx="70" cy="70" r="40" stroke="black" stroke-width="3" fill="red" />
-                </svg>
+              <li class="canvas-toolbar__list-item"draggable="true" data-item-properties='{
+                "type": "image",
+                "width": 130,
+                "height": 130,
+                "src": "images/tool-icons/Stairs.png"
+                }'>
+                <img src="images/tool-icons/Stairs.png" height="130" width="130" />
               </li>
-              <li class="canvas-toolbar__list-item">
-                <svg height="130" width="130">
-                  <circle cx="70" cy="70" r="40" stroke="black" stroke-width="3" fill="red" />
-                </svg>
+              <li class="canvas-toolbar__list-item"draggable="true" data-item-properties='{
+                "type": "image",
+                "width": 130,
+                "height": 130,
+                "src": "images/tool-icons/Wall.png"
+                }'>
+                <img src="images/tool-icons/Wall.png" height="130" width="130" />
               </li>
-              <li class="canvas-toolbar__list-item">
-                <svg height="130" width="130">
-                  <circle cx="70" cy="70" r="40" stroke="black" stroke-width="3" fill="red" />
-                </svg>
-              </li>
-              <li class="canvas-toolbar__list-item">
-                <svg height="130" width="130">
-                  <circle cx="70" cy="70" r="40" stroke="black" stroke-width="3" fill="red" />
-                </svg>
-              </li>
+              <li class="canvas-toolbar__list-item" draggable="true" data-item-properties='{
+                "originX": "left",
+                "originY": "top",
+                "width": 15,
+                "height": 130,
+                 "centeredRotation": false,
+                "fill": "rgba(0,0,0,1)",
+                "transparentCorners": false
+              }'>
+              <img src="images/tool-icons/Line.png" height="130" width="130" />
+            </li>
             </ul>
           </div>
         </div>
         <% } %>
 
-        <div class="col-12 col-sm-6 col-lg-8 <%= user ? '' : 'canvas-wrapper__centered' %>">
+        <div class="col-12 col-sm-6 col-lg-9 <%= user ? '' : 'canvas-wrapper__centered' %>">
           <div class="canvas-wrapper border">
-            <canvas id="map" class="canvas" width="925" height="700"></canvas>
+            <canvas id="map" class="canvas" width="1050" height="702"></canvas>
           </div>
         </div>
 

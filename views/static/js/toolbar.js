@@ -12,8 +12,19 @@ $(document).ready(function () {
     const jsonItemProperties = JSON.parse(itemProperties);
 
     calculateAndSetFigurePosition(jsonItemProperties, e);
-    const canvasItem = new fabric.Rect(jsonItemProperties);
+    
+    if (jsonItemProperties.type === 'image') {      
+      fabric.Image.fromURL(jsonItemProperties.src, function(oImg) {
+        oImg.left = jsonItemProperties.left;
+        oImg.top = jsonItemProperties.top;
+        oImg.scale(0.3);
 
+        window.Canvas.add(oImg).setActiveObject(oImg);
+      });
+      return;
+    }
+
+    const canvasItem = new fabric.Rect(jsonItemProperties);
     window.Canvas.add(canvasItem).setActiveObject(canvasItem);
   });
 

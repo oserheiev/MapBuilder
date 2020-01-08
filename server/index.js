@@ -13,7 +13,7 @@ const app = express();
 // Passport Config
 require('./config/passport')(passport);
 
-const PORT = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
+const PORT = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 3001;
 const serverIp = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
 // Connect to MongoDB
