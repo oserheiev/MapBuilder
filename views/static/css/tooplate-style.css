@@ -488,8 +488,9 @@ b, strong {
 }
 
 .canvas-toolbar__list-item {
-  max-width: 33.333%;
-  flex-basis: 33.333%;
+  max-width: 50%;
+  flex-basis: 50%;
+  padding-top: 15px;
 }
 
 .canvas-wrapper__centered {
