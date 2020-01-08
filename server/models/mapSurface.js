@@ -27,8 +27,8 @@ const mapSurfaceSchema = new Schema({
     clipTo: stringSchemaInterface,
     fill: stringSchemaInterface,
     fillRule: stringSchemaInterface,
-    flipX: stringSchemaInterface,
-    flipY: stringSchemaInterface,
+    flipX: booleanSchemaInterface,
+    flipY: booleanSchemaInterface,
     globalCompositeOperation: stringSchemaInterface,
     height: numberSchemaInterface,
     left: numberSchemaInterface,
@@ -45,7 +45,7 @@ const mapSurfaceSchema = new Schema({
     skewY: numberSchemaInterface,
     stroke: stringSchemaInterface,
     strokeDashArray: stringSchemaInterface,
-    strokeDashOffset: stringSchemaInterface,
+    strokeDashOffset: numberSchemaInterface,
     strokeLineCap: stringSchemaInterface,
     strokeLineJoin: stringSchemaInterface,
     strokeMiterLimit: numberSchemaInterface,
@@ -53,9 +53,20 @@ const mapSurfaceSchema = new Schema({
     top: numberSchemaInterface,
     type: stringSchemaInterface,
     version: stringSchemaInterface,
-    visible: stringSchemaInterface,
+    visible: booleanSchemaInterface,
     width: numberSchemaInterface,
+    transformMatrix: stringSchemaInterface,
+    crossOrigin: stringSchemaInterface,
+    cropX: numberSchemaInterface,
+    cropY: numberSchemaInterface,
+    src: stringSchemaInterface
   }]
 });
+
+transformMatrix: null
+crossOrigin: ""
+cropX: 0
+cropY: 0
+src: "http://localhost:3001/images/tool-icons/Door.png"
 
 module.exports = mongoose.model('MapSurface', mapSurfaceSchema);
