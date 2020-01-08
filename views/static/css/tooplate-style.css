@@ -478,7 +478,7 @@ b, strong {
 
 .canvas-container {
   height: 700px;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .canvas-toolbar__list {
